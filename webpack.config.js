@@ -24,7 +24,15 @@ module.exports = {
             plugins: [require('@babel/plugin-proposal-object-rest-spread')]
           }
         }
-      }
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "eslint-loader",
+        options: {
+          // eslint options (if necessary)
+        }
+      },
     ]
   },
   target: 'node',
